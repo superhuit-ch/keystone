@@ -215,9 +215,9 @@ relationship.prototype.inputIsValid = function (data, required, item) {
  * Treats an empty string as a null value.
  */
 relationship.prototype.updateItem = function (item, data, callback) {
-	if (!(this.path in data)) {
-		return process.nextTick(callback);
-	}
+	// if (!(this.path in data)) {
+	// 	return process.nextTick(callback);
+	// }
 	if (item.populated(this.path)) {
 		throw new Error('fieldTypes.relationship.updateItem() Error - You cannot update populated relationships.');
 	}
